@@ -169,8 +169,9 @@ private:
                 response_message += ";";
 
 
-                std::fstream file(filename, std::fstream::out | std::fstream::in | std::fstream::binary 
-																	 | std::fstream::app); 
+                std::fstream file(filename, std::fstream::in | std::fstream::binary ); 
+                
+
 
                 if(file.is_open()) {
                   file.seekg(0, std::ios_base::end);
@@ -199,6 +200,11 @@ private:
                   response_message += "\r\n";
 
                   write_message(response_message);
+
+                }
+                else {
+                  std::string error_response_message = "ERROR|INVALID_SENSOR_ID|\r\n";
+                  write_message(error_response_message);
 
                 }
                 file.close();
