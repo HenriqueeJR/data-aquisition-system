@@ -1,3 +1,8 @@
+
+//-------- Henrique Silva Junior | Ricardo Garcia de Andrade ------------------------------
+
+
+
 #include <cstdlib>
 #include <iostream>
 #include <memory>
